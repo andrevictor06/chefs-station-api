@@ -18,7 +18,7 @@ app.get('/receita/:receitaId', (req, res) => {
         send.message    = "";
         send.code       = 200;
         getReceita( req.params).then( (result) =>{
-            send.query = result.rows;
+            send.receita = result.rows;
             res.send( send)
 
             addLog("RECEITA", "Terminando Listagem de Receita", { "params": req.params, "body": req.query})
@@ -40,7 +40,7 @@ app.get('/receita', (req, res) => {
         send.message    = "";
         send.code       = 200;
         listReceitas( req.query).then( (result) =>{
-            send.query = result.rows;
+            send.receitas = result.rows;
             res.send( send)
 
             addLog("RECEITA", "Terminando Listagem de Receita", { "params": req.params, "body": req.query})

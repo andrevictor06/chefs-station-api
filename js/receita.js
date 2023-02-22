@@ -1,11 +1,10 @@
 const { mysqlQuery } = require("./mysql");
 
 function getReceita( params ){
-    console.log(params);
     let where = "";
     if( params.receitaId){
-        where = " WHERE uid = '" + params.receitaId + "'"
-        return mysqlQuery( "Select * from receita " + where)
+        where = " WHERE receitaId = '" + params.receitaId + "'"
+        return mysqlQuery( "SELECT * FROM receita " + where)
     }
     return null;
 }
@@ -13,9 +12,9 @@ function getReceita( params ){
 function listReceitas( params ){
     let where = "";
     if( params.titulo){
-        where = " WHERE titulo like '" + params.titulo.replace(/[&\/\\#,+()$~.'":*?<>{}]/g, '') + "'"
+        where = " WHERE titulo like '%" + params.titulo.replace(/[&\/\\#,+()$~.'":*?<>{}]/g, '') + "%'"
     }
-    return mysqlQuery( "Select * from receita " + where)
+    return mysqlQuery( "SELECT * FROM receita " + where)
 }
 
 module.exports = {
