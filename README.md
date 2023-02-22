@@ -13,7 +13,7 @@ Api de consulta, cadastro de receitas
   1. Ao acessar o endereço deverá ser retornado a mensagem: *{"message":"Endpoint não encontrado!","code":502}*
 
 ## Conteúdo do arquivo ".env":
-    *MYSQL_HOST*: Endereço do banco de dados. Default: localhost
-    *MYSQL_USER*: Usuario do banco de dados. Default: root
-    *MYSQL_PASSWORD*: Senha do banco de dados. Default: senha padrao MySQL
-    *MYSQL_DATABASE*: Nome do database, onde serão criados as tabelas. Default: chefs_station
+    MYSQL_HOST: Endereço do banco de dados. Default: localhost
+    MYSQL_USER: Usuario do banco de dados. Default: root
+    MYSQL_PASSWORD: Senha do banco de dados. Default: senha padrao MySQL
+    MYSQL_DATABASE: Nome do database, onde serão criados as tabelas. Default: chefs_station
